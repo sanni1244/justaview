@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
+
+</head>
+<body>
+        <div class="nav">
+            <div class="tiptop">
+                    <img src="./img/logo.png" alt="" class="logo">
+                <div class="navsection">
+                    <div class="portf">Portfolio</div>
+                    <div class="navright">
+                        <div class="navlink active"><a href="">Home</a></div>
+                        <div class="navlink"><a href="">Project</a></div>
+                        <div class="navlink"><a href="">Resume</a></div>
+                    </div>
+                </div>
+            </div> 
+            <div class="herosection">
+                <div class="myinfo">
+                    <p class="tip_greeting">Hello, <span class="lil_col">I'm</span></p>
+                    <p class="name">Sanni Opeyemi</p>
+                    <p>Web Developer & Web Designer</p>
+                    <p class="somewords">I am bla bla bla, Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique officia animi atque </p>
+                    <p class="letschat"><button><a href="">Let's Chat</a></button></p>
+                    <p  class="logo1">
+                        <span> Check out my pages</span>
+                        <span>
+                            <a href="http://www.google.com">
+                                <img class="logo" src="./img/linkedin.svg" alt="linkedin">
+                            </a>
+                            <a href="http://www.https://github.com/sanni1244">
+                                <img class="logo" src="./img/github.svg" alt="github">
+                            </a>
+                        </span>
+                    </p>
+                </div>
+                <div class="myimg">
+                    <img src="./img/pic.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="myservices">
+            <div class="whatido">
+                <center><p class="name">What I Do</p></center>
+                <div class="profession">
+                    <div class="mydetailsbox">
+                        <img class="logo3" src="./img/web.png" alt="">
+                            <p class="ability">Web Developer</p>
+                            <p class="words">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </img>
+                    </div>
+                    <div class="mydetailsbox">
+                        <img class="logo3" src="./img/ui.png" alt="">
+                            <p class="ability">Web Designer</p>
+                            <p class="words">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </img>
+                    </div>
+                    <div class="mydetailsbox">
+                        <img class="logo3" src="./img/other.png" alt="">
+                            <p class="ability">Other Capabilities</p>
+                            <p class="words">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </img>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recentworks">
+          <center><p class="name">My Projects</p></center>
+          <div class="talkaboutme">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores quisquam ad atque! Provident error ullam mollitia ad vero.</div>
+          <div class="glide">
+            <div id="" class="display">
+              <img  id="box1" src="./projimg/img25.png" alt="">
+              <img  id="box2" src="./projimg/img26.png" alt="">
+              <img  id="box3" src="./projimg/img27.png" alt="">
+              <img  id="box4" src="./projimg/img28.png" alt="">
+              <a id="websss1" class="websss" href="https://sanni1244.github.io/E-commerce_web/">E commerce web site</a>
+            </div>
+            <div class="display">
+              <img  id="box5" src="./projimg/img21.png" alt="">
+              <img  id="box6" src="./projimg/img22.png" alt="">
+              <img  id="box7" src="./projimg/img23.png" alt="">
+              <img  id="box8" src="./projimg/img24.png" alt="">
+              <a id="websss2" class="websss" href="https://sanni1244.github.io/House-repair-web-design/">House Repair Web design</a>
+            </div>
+          </div>
+            <div class="changebttns">
+                <button class="bttnmix prev" onclick="prev()">Prev</button>
+                <button class="bttnmix next" onclick="next()">Next</button>
+            </div>
+        </div>
+<script>
+  var box1 = document.getElementById("box1");
+  var box2 = document.getElementById("box2");
+  var box3 = document.getElementById("box3");
+  var box4 = document.getElementById("box4");
+  var box5 = document.getElementById("box5");
+  var box6 = document.getElementById("box6");
+  var box7 = document.getElementById("box7");
+  var box8 = document.getElementById("box8");
+  var link1 = document.getElementById("websss1");
+  var link2 = document.getElementById("websss2");
+
+
+
+
+    project = {
+      1: ["./projimg/img9.png", "./projimg/img10.png", "./projimg/img11.png", "./projimg/img12.png", "https://sanni1244.github.io/Simple-login-sign_up/index.html", "Sign up, Log in web page"],
+      2: ["./projimg/img13.png", "./projimg/img14.png", "./projimg/img15.png", "./projimg/img16.png", "https://sanni1244.github.io/payment-page/index.html", "Make payments web design"],
+      3: ["./projimg/img17.png", "./projimg/img18.png", "./projimg/img19.png", "./projimg/img20.png", "https://sanni1244.github.io/Cars-selection/", "Car purchase web design"],
+      4: ["./projimg/img21.png", "./projimg/img22.png", "./projimg/img23.png", "./projimg/img24.png", "https://sanni1244.github.io/House-repair-web-design/", "House Repair Web design"],
+      5: ["./projimg/img25.png", "./projimg/img26.png", "./projimg/img27.png", "./projimg/img28.png", "https://sanni1244.github.io/E-commerce_web/", "E commerce web site"],
+      6: ["./projimg/img29.png", "./projimg/img30.png", "./projimg/img31.png", "./projimg/img32.png", "https://sanni1244.github.io/elearning/", "E-learning web page"],
+      7: ["./projimg/img1.png", "./projimg/img2.png", "./projimg/img3.png", "./projimg/img4.png", "https://sanni1244.github.io/siwes-project-frontend/", "Simple work friendly project"],
+      8: ["./projimg/img5.png", "./projimg/img6.png", "./projimg/img7.png", "./projimg/img8.png", "https://sanni1244.github.io/Departmental-course-Lasu-/", "Check your courses [Web page]"],
+    }
+
+    i = 1;
+    j = 2;
+    
+  function next(){
+    box1.src = project[i][0];
+    box2.src = project[i][1];
+    box3.src = project[i][2];
+    box4.src = project[i][3];
+    link1.src = project[i][4];
+    link1.innerHTML = project[i][5];
+
+    box5.src = project[j][0];
+    box6.src = project[j][1];
+    box7.src = project[j][2];
+    box8.src = project[j][3];
+    link2.src = project[j][4];
+    link2.innerHTML = project[j][5];
+
+
+  console.log(i);
+  console.log(j);
+  j += 2;
+  i += 2;
+  if(i >= Object.keys(project).length){
+    i = 1;
+    j = 2;
+  }
+  }
+  function prev(){
+    j -= 2;
+  i -= 2;
+  if(i < 1){
+    i = Object.keys(project).length - 1;
+    j = Object.keys(project).length;
+  }
+    box1.src = project[i][0];
+    box2.src = project[i][1];
+    box3.src = project[i][2];
+    box4.src = project[i][3];
+    link1.src = project[i][4];
+    link1.innerHTML = project[i][5];
+    box5.src = project[j][0];
+    box6.src = project[j][1];
+    box7.src = project[j][2];
+    box8.src = project[j][3];
+    link2.src = project[j][4];
+    link2.innerHTML = project[j][5];
+  console.log(i);
+  console.log(j);
+  
+  }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <center><p class="name">Contact Points</p></center>
+
+        <div class="hiffg">
+            <div class="poc1">
+                <div class="poc">
+                    <p>Whatsapp</p>
+                    <p><a href="https://wa.me/2349083575587"><img class="plar" src="./img/whatsapp.svg" alt=""></a></p>
+                </div>
+                <div id="qr-code1" class="qrcode">
+                </div>
+            </div>
+            <div class="poc1">
+                <div class="poc">
+                    <p>LinkedIn</p>
+                    <p><a href="https://www.linkedin.com/in/opelin"><img class="plar" src="./img/linkedin.svg" alt=""></a></p>
+                </div>
+                <div id="qr-code2" class="qrcode"></div>
+            </div>
+            <div class="poc1">
+                <div class="poc">
+                <p>Telegram</p>
+                <p><a href="https://t.me/OpeyemiM1"><img class="plar" src="./img/telegram.svg" alt=""></a></p>
+                </div>
+                <div id="qr-code3" class="qrcode">
+                </div>
+            </div>
+            <div class="poc1">
+                <div class="poc">
+                <p>Instagram</p>
+                <p><a href="https://www.instagram.com/ope1sanni/"><img class="plar" src="./img/instagram.svg" alt=""></a></p>
+                </div>
+                <div id="qr-code4" class="qrcode">
+                </div>
+            </div>
+        </div>
+        <div class="bottompoint">
+            <div class="">
+                Based in Ikorodu <br>
+                Lagos Nigeria <br>
+                Call: <a class="call" href="tel:+2349083575587">+2349083575587</a> <br>
+                <a  class="call" href="mailto:sanniopeyemiolayinka@gmail.com">sanniopeyemiolayinka@gmail.com</a>
+            </div>
+            <div class="repolink">
+                <a href="https://www.linkedin.com/in/opelin">Linkedin</a><br>
+                <a href="https://wa.me/2349083575587">Whatsapp</a><br>
+                <a href="https://t.me/OpeyemiM1">Telegram</a><br>
+                <a href="https://www.instagram.com/ope1sanni/">Instagram</a><br>       
+            </div>
+            <div class="repolink">
+                <a href="https://github.com/sanni1244">Github</a><br>
+                <a href="https://stackoverflow.com/users/15620952/sanni-opeyemi">Stack overflow</a><br>
+                <a href="https://drive.google.com/file/d/1HSp53SaWjXci_kiiW0iib025j9iXeHnX/view?usp=sharing">Resume</a><br>
+                <a href="https://drive.google.com/file/d/12ClOekQYLlSdc_kfGOQfKUtopRzsNics/view?usp=sharing">KodeCamp Certificate</a><br>
+            </div>
+            
+        </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<script>
+    var qrCodeDiv = document.getElementById('qr-code1');
+        var whatsappNumber = "2349083575587";
+        var qrCode = new QRCode(qrCodeDiv, {
+            text: "https://wa.me/" + whatsappNumber,
+            width: 130,
+            height: 130,
+            colorDark : "black",
+            colorLight : "white",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+        var qrCodeDiv = document.getElementById('qr-code2');
+        var linkedinUrl = "https://www.linkedin.com/in/opelin";
+        var qrCode = new QRCode(qrCodeDiv, {
+            text: linkedinUrl,
+            width: 130,
+            height: 130,
+            colorDark : "black",
+            colorLight : "white",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+        var qrCodeDiv = document.getElementById('qr-code3');
+        var telegramURL = 'https://t.me/' + "OpeyemiM1";
+        var qrCode = new QRCode(qrCodeDiv, {
+            text: telegramURL,
+            width: 130,
+            height: 130,
+            colorDark : "black",
+            colorLight : "white",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+        var qrCodeDiv = document.getElementById('qr-code4');
+        var urll = "https://www.instagram.com/" + "ope1sanni/";
+        var qrCode = new QRCode(qrCodeDiv, {
+            text: urll,
+            width: 130,
+            height: 130,
+            colorDark : "black",
+            colorLight : "white",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+</script>
