@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Image Generator</title>
+	<style>
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+	<h1>Random Image Generator</h1>
+	<img id="random-image">
+	<button id="next-button">Next</button>
+
+	<script src="script.js"></script>
+</body>
+</html>
+
+<script>
+    // Define an array of image URLs
+const images = [
+	"./projimg/img1.png",
+	"./projimg/img2.png",
+	"./projimg/img3.png",
+	"./projimg/img4.png",
+	"./projimg/img9.png",
+];
+
+// Get the random image element and next button element
+const randomImage = document.getElementById("random-image");
+const nextButton = document.getElementById("next-button");
+
+// Add a click event listener to the next button
+nextButton.addEventListener("click", () => {
+	// Generate a random number between 0 and the length of the images array
+	const randomIndex = Math.floor(Math.random() * images.length);
+
+	// Set the source attribute of the random image element to the randomly selected image URL
+	randomImage.src = images[randomIndex];
+});
+
+</script>
